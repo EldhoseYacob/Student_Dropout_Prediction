@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dropout Prediction System</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+</head>
+<body>
+<div class="container">
+    <div class="home-card">
+        <div class="logo">
+            <i class="fas fa-user-graduate"></i>
+        </div>
+        <h1>Student Dropout Prediction System</h1>
+        <p class="subtitle">
+            Predict students who are likely to drop out using
+            <strong>Machine Learning (Random Forest)</strong>
+        </p>
+        <hr>
+        
+        <div class="features">
+            <div class="feature-box">
+                <i class="fas fa-brain"></i>
+                <h3>Machine Learning</h3>
+                <p>Random Forest based prediction model.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-chart-line"></i>
+                <h3>High Accuracy</h3>
+                <p>Predict student dropout risk accurately.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-user-shield"></i>
+                <h3>Administrator Panel</h3>
+                <p>Easy student information management.</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div class="stat">
+                <h2>5000+</h2>
+                <p>Students</p>
+            </div>
+            <div class="stat">
+                <h2>Random Forest</h2>
+                <p>Prediction Model</p>
+            </div>
+            <div class="stat">
+                <h2>3</h2>
+                <p>Prediction Classes</p>
+            </div>
+        </div>
+        <br>
+        
+        <a href="/predict">
+            <button class="start-btn">
+                <i class="fas fa-rocket"></i>
+                Start Prediction
+            </button>
+        </a>
+        <footer>
+            Developed using Python • Flask • Random Forest • Scikit-learn
+            <br>
+            © 2026 Student Dropout Prediction System
+        </footer>
+    </div>
+</div>
+
+</body>
+
+</html>

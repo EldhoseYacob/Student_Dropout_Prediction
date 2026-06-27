@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Information</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h1>Student Information Form</h1>
+
+        <p class="subtitle">
+            Enter the student's details to predict academic status.
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <!-- Age -->
+            <div class="form-group">
+                <label>Age</label>
+                <input
+    type="number"
+    name="age"
+    min="17"
+    max="40"
+    placeholder="17 - 40"
+    required> 
+    </div>
+
+            <!-- Region -->
+            <!-- Region -->
+<div class="form-group">
+
+    <label>Region</label>
+
+    <select name="region" required>
+
+        <option value="">Select Region</option>
+
+        <option value="0">Alexandria</option>
+        <option value="1">Amman</option>
+        <option value="2">Baghdad</option>
+        <option value="3">Beirut</option>
+        <option value="4">Cairo</option>
+        <option value="5">Casablanca</option>
+        <option value="6">Doha</option>
+        <option value="7">Dubai</option>
+        <option value="8">Riyadh</option>
+        <option value="9">Tunis</option>
+
+    </select>
+
+</div>
+
+            <!-- Exam Season -->
+            <div class="form-group">
+
+    <label>Exam Season</label>
+
+    <select name="exam_season" required>
+
+        <option value="">Select Exam Season</option>
+
+        <option value="0">No</option>
+
+        <option value="1">Yes</option>
+
+    </select>
+
+</div>
+
+            <!-- Courses -->
+            <div class="form-group">
+
+                <label>Courses Enrolled</label>
+
+                <input
+    type="number"
+    name="courses_enrolled"
+    min="1"
+    max="7"
+    placeholder="1 - 7"
+    required>
+
+            </div>
+
+            <!-- Completed Assignments -->
+            <div class="form-group">
+
+                <label>Completed Assignments</label>
+
+                <input
+    type="number"
+    name="completed_assignments"
+    min="0"
+    max="35"
+    placeholder="0 - 35"
+    required>
+
+            </div>
+
+            <!-- Completion Rate -->
+            <div class="form-group">
+
+                <label>Completion Rate</label>
+
+                <input
+    type="number"
+    name="completion_rate"
+    min="0"
+    max="1"
+    step="0.01"
+    placeholder="0.00 - 1.00"
+    required>
+
+            </div>
+
+            <!-- Login Frequency -->
+            <div class="form-group">
+
+                <label>Login Frequency</label>
+
+                <input
+    type="number"
+    name="login_frequency"
+    min="0.1"
+    max="14"
+    step="0.01"
+    placeholder="0.10 - 14.00"
+    required>
+
+            </div>
+
+            <!-- Last Activity -->
+            <div class="form-group">
+
+                <label>Last Activity (Days Ago)</label>
+
+                <input
+    type="number"
+    name="last_activity_days_ago"
+    min="1"
+    max="70"
+    placeholder="1 - 70"
+    required>
+
+            </div>
+
+            <!-- Forum Posts -->
+            <div class="form-group">
+
+                <label>Forum Posts Count</label>
+
+                <input
+    type="number"
+    name="forum_posts_count"
+    min="0"
+    max="24"
+    placeholder="0 - 24"
+    required>
+
+            </div>
+
+            <!-- Dropout Score -->
+            <div class="form-group">
+
+                <label>Dropout Score</label>
+
+                <input
+type="number"
+name="dropout_score"
+min="0"
+max="1"
+step="0.01"
+placeholder="Example : 0.45"
+required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="predict-btn">
+
+                Predict Student Status
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="result-card">
+
+        <h1>
+            Prediction Result
+        </h1>
+
+        <hr>
+        <div class="prediction-badge {{ badge_class }}">
+    {{ prediction }}
+</div>
+
+<p class="prediction-message">
+    {{ message }}
+</p>
+
+        <a href="/predict">
+
+            <button class="predict-btn">
+
+                Predict Another Student
+
+            </button>
+
+        </a>
+
+        <br><br>
+
+        <a href="/">
+
+            <button class="home-btn">
+
+                Back to Home
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
